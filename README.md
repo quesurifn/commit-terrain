@@ -2,9 +2,9 @@
 
 Turn a GitHub contribution calendar, or any grid of numbers, into topographic contour lines, ridge lines like an EKG of your year, or an abstract atlas.
 
-![A year of contributions as contour lines](examples/across.svg)
+![A year of contributions as contour lines](examples/across.png)
 
-It’s the terrain under every page of [kylecrfahey.com](https://kylecrfahey.com): a year of my GitHub contributions, one row per week and one column per weekday, with each day’s count as the height. Busy stretches become ridges and quiet ones flatten into valleys.
+It’s the terrain under every page of [kylecrfahey.com](https://kylecrfahey.com), my site: a year of my GitHub contributions, one row per week and one column per weekday, with each day’s count as the height. Busy stretches become ridges and quiet ones flatten into valleys.
 
 It’s a thin, opinionated layer over [d3-contour](https://github.com/d3/d3-contour). The opinions are the useful part:
 
@@ -48,15 +48,27 @@ It runs anywhere JavaScript does. The site computes it once at build time, so vi
 
 ### Ridge lines
 
-![A year of contributions as ridge lines](examples/ridges.svg)
+![A year of contributions as ridge lines](examples/ridges.png)
 
 `ridges(weeks)` draws one smooth line per weekday, rising with each week’s work. Each line comes with an `area` that closes down to a floor; fill it with your background and draw back to front, and the nearer ridges hide the ones behind. `--ridges` on the CLI does exactly that.
 
 ### Atlas
 
-![A year of contributions as an abstract atlas](examples/atlas.svg)
+![A year of contributions as an abstract atlas](examples/atlas.png)
 
 The geography of your commits, kept abstract. `atlasToSvg(terrain)` fills the contours like a relief map in earth tones: the quietest stretches settle below a coastline as deep moss, and work rises from bone through sand and ochre to ink at the busiest peaks. `seaLevel` (default `0.3`) is the share of levels underwater; `water` and `land` take your own color stops. `--atlas` on the CLI.
+
+## In the wild
+
+It runs under every page of [kylecrfahey.com](https://kylecrfahey.com). The contours sit behind the text and take the color of whichever chapter you’re reading:
+
+![kylecrfahey.com, with the terrain behind the page](examples/site-home.png)
+
+And the ridges are the “I still ship code” chart on [the consulting page](https://kylecrfahey.com/consulting):
+
+![The ridge lines on kylecrfahey.com](examples/site-ridges.png)
+
+I write about building with AI and systems design at [kylecrfahey.com/writing](https://kylecrfahey.com/writing). [Plain Questions, Valid GraphQL](https://kylecrfahey.com/writing/natural-language-bi-over-graphql) is a good place to start.
 
 ## API
 
@@ -102,4 +114,4 @@ Swaps rows and columns.
 
 ## License
 
-MIT, by [Kyle C. R. Fahey](https://kylecrfahey.com).
+MIT, by [Kyle C. R. Fahey](https://kylecrfahey.com). [Writing](https://kylecrfahey.com/writing) · [Work](https://kylecrfahey.com/work)
