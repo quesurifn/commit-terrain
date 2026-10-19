@@ -1,0 +1,19 @@
+{
+  "name": "commit-terrain",
+  "version": "0.1.0",
+  "description": "Turn a GitHub contribution calendar, or any grid, into topographic contour lines.",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": { ".": { "types": "./index.d.ts", "default": "./index.js" } },
+  "bin": { "commit-terrain": "cli.js" },
+  "files": ["index.js", "index.d.ts", "cli.js"],
+  "scripts": { "test": "node --test" },
+  "keywords": ["github", "contributions", "contour", "topographic", "svg", "d3", "terrain"],
+  "author": "Kyle C. R. Fahey (https://kylecrfahey.com)",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/quesurifn/commit-terrain.git" },
+  "homepage": "https://github.com/quesurifn/commit-terrain#readme",
+  "engines": { "node": ">=18" },
+  "dependencies": { "d3-contour": "^4.0.2" }
+}
